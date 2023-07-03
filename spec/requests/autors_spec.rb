@@ -18,11 +18,13 @@ RSpec.describe "/autors", type: :request do
   # Autor. As you add validations to Autor, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    { nome: "John Doe", cpf: "12463278722" }
   }
 
+  
+
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    { nome: "", cpf: "123456789" }
   }
 
   describe "GET /index" do
@@ -96,7 +98,9 @@ RSpec.describe "/autors", type: :request do
         autor = Autor.create! valid_attributes
         patch autor_url(autor), params: { autor: new_attributes }
         autor.reload
-        skip("Add assertions for updated state")
+
+        expect(autor.nome).to eq(new_attributes[:nome])
+        expect(autor.cpf).to eq(new_attributes[:cpf])
       end
 
       it "redirects to the autor" do
