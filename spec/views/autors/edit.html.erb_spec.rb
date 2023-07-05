@@ -4,7 +4,7 @@ RSpec.describe "autors/edit", type: :view do
   let(:autor) {
     Autor.create!(
       nome: "MyString",
-      cpf: "MyString"
+      cpf: "12463278722"
     )
   }
 
