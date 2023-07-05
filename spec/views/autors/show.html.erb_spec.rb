@@ -4,7 +4,7 @@ RSpec.describe "autors/show", type: :view do
   before(:each) do
     assign(:autor, Autor.create!(
       nome: "Nome",
-      cpf: "Cpf"
+      cpf: "12463278722"
     ))
   end
 

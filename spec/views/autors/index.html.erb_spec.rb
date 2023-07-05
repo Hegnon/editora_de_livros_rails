@@ -5,11 +5,11 @@ RSpec.describe "autors/index", type: :view do
     assign(:autors, [
       Autor.create!(
         nome: "Nome",
-        cpf: "Cpf"
+        cpf: "12463278722"
       ),
       Autor.create!(
         nome: "Nome",
-        cpf: "Cpf"
+        cpf: "12463278722"
       )
     ])
   end

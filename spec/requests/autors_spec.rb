@@ -18,11 +18,13 @@ RSpec.describe "/autors", type: :request do
   # Autor. As you add validations to Autor, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    { nome: "John Doe", cpf: "12463278722" }
+    { nome: "name", cpf: "12463278722" }
+
   }
-
+  let(:new_attributes) {
+    { nome: "Updated name", cpf: "12463278722" }
+  }
   
-
   let(:invalid_attributes) {
     { nome: "", cpf: "123456789" }
   }
@@ -99,7 +101,7 @@ RSpec.describe "/autors", type: :request do
         patch autor_url(autor), params: { autor: new_attributes }
         autor.reload
 
-        expect(autor.nome).to eq(new_attributes[:nome])
+        expect(autor.nome).to eq(new_attributes[:name])
         expect(autor.cpf).to eq(new_attributes[:cpf])
       end
 
