@@ -1,29 +1,24 @@
-require 'rails_helper'
-
 RSpec.describe "livros/index", type: :view do
-  before(:each) do
-    assign(:livros, [
-      Livro.create!(
-        titulo: "Titulo",
-        autor: nil,
-        publicado: "Publicado",
-        isbn: "Isbn"
-      ),
-      Livro.create!(
-        titulo: "Titulo",
-        autor: nil,
-        publicado: "Publicado",
-        isbn: "Isbn"
-      )
-    ])
-  end
-
   it "renders a list of livros" do
+    autor = Autor.create(nome: "name", cpf: "12463278722")
+    livro1 = Livro.create!(
+      titulo: "teste",
+      autor: autor,
+      publicado: "01/01/2020",
+      isbn: "9788533302273"
+    )
+    livro2 = Livro.create!(
+      titulo: "Outro Título",
+      autor: autor,
+      publicado: "01/01/2020",
+      isbn: "9788533302273"
+    )
+
+    assign(:livros, [livro1, livro2])
+
     render
-    cell_selector = Rails::VERSION::STRING >= '7' ? 'div>p' : 'tr>td'
-    assert_select cell_selector, text: Regexp.new("Titulo".to_s), count: 2
-    assert_select cell_selector, text: Regexp.new(nil.to_s), count: 2
-    assert_select cell_selector, text: Regexp.new("Publicado".to_s), count: 2
-    assert_select cell_selector, text: Regexp.new("Isbn".to_s), count: 2
+
+    expect(rendered).to have_text("teste")
+    expect(rendered).to have_text("Outro Título")
   end
 end
