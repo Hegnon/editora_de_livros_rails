@@ -18,11 +18,12 @@ RSpec.describe "/livros", type: :request do
   # Livro. As you add validations to Livro, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    autor = Autor.create(nome: "name", cpf: "12463278722")
+    { titulo: "abc", isbn: "9788533302273", autor_id: autor.id }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    { titulo: "", isbn: "00955654" }
   }
 
   describe "GET /index" do

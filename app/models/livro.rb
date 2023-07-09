@@ -4,6 +4,7 @@ class Livro < ApplicationRecord
 
   validates :titulo, presence: true
   validates :titulo, length: { minimum:1, maximum:100 }
+  validates :isbn, presence: true
   validate :isbn_is_valid?
 
   scope :search, ->(query) { where("titulo like ?", "%#{query}%") }
@@ -12,6 +13,6 @@ class Livro < ApplicationRecord
 
   private
   def isbn_is_valid?
-    errors.add(:isbn, "ISBN invalido! por favor, verifique os dados.") unless ISBN.valid?(isbn)
+    errors.add(:isbn, "ISBN inválido! Por favor, verifique os dados.") unless ISBN.valid?(self.isbn)
   end
 end
