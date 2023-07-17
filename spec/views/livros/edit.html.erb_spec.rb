@@ -5,9 +5,9 @@ RSpec.describe "livros/edit", type: :view do
 
   let(:livro) {
     Livro.create!(
-      titulo: "abc",
+      titulo: "teste",
       autor: autor,
-      publicado: "MyString",
+      publicado: "01/01/2020",
       isbn: "9788533302273"
     )
   }
