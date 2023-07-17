@@ -10,6 +10,17 @@ gem "rspec-rails"
 
 gem "cpf_cnpj"
 
+gem "isbn"
+
+gem "bootstrap"
+
+gem "jquery-rails"
+
+gem "popper_js"
+
+gem "webpack"
+
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
