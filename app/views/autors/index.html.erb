@@ -6,12 +6,12 @@
   <% @autors.each do |autor| %>
     <%= render autor %>
     <p>
-      <%= link_to "Show this autor", autor, class: "btn btn-primary mr-2"%>
+      <%= link_to "Show this autor", autor %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New autor", new_autor_path, class: "btn btn-primary mr-2" %>
+<%= link_to "New autor", new_autor_path %>
 
 
 
