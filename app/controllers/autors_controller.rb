@@ -2,6 +2,13 @@ class AutorsController < ApplicationController
   before_action :set_autor, only: %i[ show edit update destroy ]
 
   # GET /autors or /autors.json
+  
+  def search
+    query = params[:query].to_s.downcase
+    autores = Autor.where('lower(nome) LIKE ?', "%#{query}%")
+    render json: { data: autores.map { |autor| { value: autor.id, text: autor.nome } } }
+  end
+
   def index
     @autors = Autor.all
   end
