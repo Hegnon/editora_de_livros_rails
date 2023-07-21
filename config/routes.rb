@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :fornecedors
   root 'home#index'
   resources :livros
   resources :autors
