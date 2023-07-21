@@ -1,6 +1,10 @@
 class Livro < ApplicationRecord
   belongs_to :autor
 
+  def nome
+    autor.nome if autor
+  end
+
 
   validates :titulo, presence: true
   validates :titulo, length: { minimum:1, maximum:100 }
