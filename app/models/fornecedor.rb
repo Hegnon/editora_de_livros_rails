@@ -2,7 +2,6 @@ class Fornecedor < ApplicationRecord
 
     validates :nome, presence: true
   validates :nome, length: { minimum: 3, maximum: 60 }
-  validates :cnpj, uniqueness: true
   validate :cnpj_is_valid?
 
   private
