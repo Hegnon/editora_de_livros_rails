@@ -18,11 +18,15 @@ RSpec.describe "/fornecedors", type: :request do
   # Fornecedor. As you add validations to Fornecedor, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
-  }
+    { name: "nome", cnpj: "84436204000160" }
 
+  }
+  let(:new_attributes) {
+    { name: "Updated name", cnpj: "84436204000160" }
+  }
+  
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    { name: "", cnpj: "123456789" }
   }
 
   describe "GET /index" do
