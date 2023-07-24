@@ -56,13 +56,19 @@ class AutorsController < ApplicationController
 
   # DELETE /autors/1 or /autors/1.json
   def destroy
-    @autor.destroy
-
-    respond_to do |format|
-      format.html { redirect_to autors_url, notice: "Autor was successfully destroyed." }
-      format.json { head :no_content }
+    begin
+      @autor.destroy
+      respond_to do |format|
+        format.html { redirect_to autors_url, notice: "Autor was successfully destroyed." }
+        format.json { head :no_content }
+      end
+    rescue ActiveRecord::InvalidForeignKey => e
+      respond_to do |format|
+        format.html { redirect_to autors_url, notice: "Não foi possível excluir o autor pois existem livros viculados a ele." }
+        format.json { render json: { error: "Não foi possível excluir o autor devido a dependências em outros registros." }, status: :unprocessable_entity }
+      end
     end
-  end
+  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.
