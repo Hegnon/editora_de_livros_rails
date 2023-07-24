@@ -18,15 +18,15 @@ RSpec.describe "/fornecedors", type: :request do
   # Fornecedor. As you add validations to Fornecedor, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    { name: "nome", cnpj: "84436204000160" }
+    { nome: "nome", cnpj: "84436204000160" }
 
   }
   let(:new_attributes) {
-    { name: "Updated name", cnpj: "84436204000160" }
+    { nome: "Updated name", cnpj: "84436204000160" }
   }
   
   let(:invalid_attributes) {
-    { name: "", cnpj: "123456789" }
+    { nome: "", cnpj: "123456789" }
   }
 
   describe "GET /index" do
@@ -93,14 +93,15 @@ RSpec.describe "/fornecedors", type: :request do
   describe "PATCH /update" do
     context "with valid parameters" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
+        { nome: "Updated name", cnpj: "84436204000160" }
+    }
 
       it "updates the requested fornecedor" do
         fornecedor = Fornecedor.create! valid_attributes
         patch fornecedor_url(fornecedor), params: { fornecedor: new_attributes }
         fornecedor.reload
-        skip("Add assertions for updated state")
+        expect(fornecedor.nome).to eq(new_attributes[:nome])
+        expect(fornecedor.cnpj).to eq(new_attributes[:cnpj])
       end
 
       it "redirects to the fornecedor" do
