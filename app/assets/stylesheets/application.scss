@@ -20,3 +20,17 @@
  body {
     background-color: #f1f1f1;
   }
+
+/* app/assets/stylesheets/application.scss */
+.sidebar {
+  width: 110px;
+  background-color: #464444;
+  height: 100vh; /* Ajuste a altura conforme necessário */
+  position: fixed;
+  top: 100;
+  left: 0;
+}
+
+.main-content {
+  margin-left: 120px; /* Deixe a mesma largura do menu lateral para evitar que a página fique sobrescrita pelo menu */
+}
