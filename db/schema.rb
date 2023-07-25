@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_21_102403) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_24_193322) do
+  create_table "accounts", force: :cascade do |t|
+    t.integer "fornecedor_id", null: false
+    t.string "numero_conta"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["fornecedor_id"], name: "index_accounts_on_fornecedor_id"
+  end
+
   create_table "autors", force: :cascade do |t|
     t.string "nome"
     t.string "cpf"
@@ -35,5 +43,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_21_102403) do
     t.index ["autor_id"], name: "index_livros_on_autor_id"
   end
 
+  add_foreign_key "accounts", "fornecedors"
   add_foreign_key "livros", "autors"
 end
