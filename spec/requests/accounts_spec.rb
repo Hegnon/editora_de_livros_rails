@@ -18,16 +18,22 @@ RSpec.describe "/accounts", type: :request do
   # Account. As you add validations to Account, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    fornecedor = Fornecedor.create(nome: "name", cnpj: "532364000131")
+    { numero_conta: "00203678", digit: "9", fornecedor_id: fornecedor.id }
+  }
+
+  let(:new_attributes) {
+    { numero_conta: "Updated numero conta", digit: "9" }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    { numero_conta: "", digit: "" }
   }
 
   describe "GET /index" do
     it "renders a successful response" do
-      Account.create! valid_attributes
+      fornecedor = Fornecedor.create(nome: "Fornecedor", cnpj: "532364000131")
+      Account.create! valid_attributes.merge(fornecedor_id: fornecedor.id)
       get accounts_url
       expect(response).to be_successful
     end
