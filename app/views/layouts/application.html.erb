@@ -1,0 +1,29 @@
+<!-- app/views/layouts/application.html.erb -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Minha Aplicação</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body>
+    <div class="sidebar">
+      <!-- Conteúdo do menu lateral aqui -->
+      <div><%= link_to "Home", root_path %></div>
+      <div><%= link_to "Autores", autors_path %></div>
+      <div><%= link_to "Livros", livros_path %></div>
+      <div><%= link_to "Fornecedores", fornecedors_path %></div>
+      <div><%= link_to "Contas", accounts_path %></div>
+      <!-- Adicione mais links do menu conforme necessário -->      
+    </div>
+
+    <div class="main-content">
+      <%= yield %>
+    </div>
+
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>
+
