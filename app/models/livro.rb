@@ -1,10 +1,15 @@
 class Livro < ApplicationRecord
   belongs_to :autor
 
+  def nome
+    autor.nome if autor
+  end
+
 
   validates :titulo, presence: true
   validates :titulo, length: { minimum:1, maximum:100 }
   validates :isbn, presence: true
+  validates :isbn, uniqueness: true
   validate :isbn_is_valid?
 
   scope :search, ->(query) { where("titulo like ?", "%#{query}%") }

@@ -22,6 +22,10 @@ RSpec.describe "/livros", type: :request do
     { titulo: "abc", isbn: "9788533302273", autor_id: autor.id }
   }
 
+  let(:new_attributes) {
+    { titulo: "Updated titulo", isbn: "9788533302273" }
+  }
+
   let(:invalid_attributes) {
     { titulo: "", isbn: "00955654" }
   }
@@ -90,14 +94,15 @@ RSpec.describe "/livros", type: :request do
   describe "PATCH /update" do
     context "with valid parameters" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        { titulo: "Updated titulo", isbn: "9788533302273" }
       }
 
       it "updates the requested livro" do
         livro = Livro.create! valid_attributes
         patch livro_url(livro), params: { livro: new_attributes }
         livro.reload
-        skip("Add assertions for updated state")
+        expect(livro.titulo).to eq(new_attributes[:titulo])
+        expect(livro.isbn).to eq(new_attributes[:isbn])
       end
 
       it "redirects to the livro" do
