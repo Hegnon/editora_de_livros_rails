@@ -1,5 +1,6 @@
 class Fornecedor < ApplicationRecord
   has_many :accounts
+  has_many :pecas
 
   validates :nome, presence: true
   validates :nome, length: { minimum: 3, maximum: 60 }
