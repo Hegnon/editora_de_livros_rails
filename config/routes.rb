@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :montagem_pecas
   resources :montagems
   resources :pecas
   resources :accounts
