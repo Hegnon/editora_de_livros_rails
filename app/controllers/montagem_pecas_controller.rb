@@ -65,6 +65,6 @@ class MontagemPecasController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def montagem_peca_params
-      params.fetch(:montagem_peca, {})
+      params.require(:montagem_peca).permit(:montagem_id, :peca_id)
     end
 end
