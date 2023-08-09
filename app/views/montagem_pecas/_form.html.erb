@@ -1,0 +1,28 @@
+<%= form_with(model: montagem_peca) do |form| %>
+  <% if montagem_peca.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(montagem_peca.errors.count, "error") %> prohibited this montagem_peca from being saved:</h2>
+
+      <ul>
+        <% montagem_peca.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+  <%= form.label :montagem_id, style: "display: block" %>
+  <%= form.collection_select :montagem_id, Montagem.all, :id, :nome, {}, { class: 'autor-select' } %>
+  </div>
+
+  <div>
+  <%= form.label :peca_id, style: "display: block" %>
+  <%= form.collection_select :peca_id, Peca.all, :id, :nome, {}, { class: 'peca-select' } %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
