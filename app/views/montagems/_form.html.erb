@@ -17,6 +17,16 @@
   </div>
 
   <div>
+  <%= form.label :livro_id, style: "display: block" %>
+  <%= form.collection_select :livro_id, Livro.all, :id, :titulo, {}, { class: 'autor-select' } %>
+  </div>
+
+  <div>
+  <%= form.label :peca_id, style: "display: block" %>
+  <%= form.collection_select :peca_id, Peca.all, :id, :nome, {}, { class: 'autor-select' } %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
