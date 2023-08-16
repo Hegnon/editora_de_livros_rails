@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @montagem_peca %>
+
+<div>
+  <%= link_to "Edit this montagem peca", edit_montagem_peca_path(@montagem_peca) %> |
+  <%= link_to "Back to montagem pecas", montagem_pecas_path %>
+
+  <%= button_to "Destroy this montagem peca", @montagem_peca, method: :delete %>
+</div>

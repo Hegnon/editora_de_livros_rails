@@ -1,0 +1,12 @@
+<h1>Montagens</h1>
+
+<div id="montagems">
+  <% @montagems.each do |montagem| %>
+    <%= render montagem %>
+    <p>
+      <%= link_to "Show this montagem", montagem %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New montagens", new_montagem_path %>

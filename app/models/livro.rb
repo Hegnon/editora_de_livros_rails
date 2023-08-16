@@ -1,5 +1,6 @@
 class Livro < ApplicationRecord
   belongs_to :autor
+  has_many :montagem
 
   def nome
     autor.nome if autor
