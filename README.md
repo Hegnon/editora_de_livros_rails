@@ -36,7 +36,7 @@ Validação de CPF e geração de relatório com livros publicados pelo autor.  
 - Cadastrar Fornecedores com uma Conta
 - Cadastrar Peças vinculando com Fornecedor
 
-### 2 - Implementar as APIs
+### 2 - Implementar as APIs (Pendente)
 - Cadastrar Autores
 - Cadastrar Livros vinculando com Autor
 - Cadastrar Fornecedores com uma Conta
