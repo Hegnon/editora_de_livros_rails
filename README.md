@@ -1,24 +1,15 @@
-# editora_de_livros_rails
-Este projeto consiste na construção de um website de uma editora de livros utilizando Ruby on Rails.
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/joaogdfaero/editora_livros_rails">
-    <img src="images/logo2.png" alt="Logo" width="180" height="180">
-  </a>
 
 <h3 align="center">Editora Rails</h3>
 
   <p align="center">
-    Este projeto consiste na construção de um website de uma editora de livros utilizando Ruby on Rails. Ele tem como objetivos desenvolver habilidades básicas no uso do Ruby On Rails. É um dos projetos da mentoria  <a href="https://hotmart.com/pt-br/marketplace/produtos/desenvolvendome/S43742208Q">DesenvolvendoMe</a>.
+    Este empreendimento visa a criação de um website para uma casa editorial de livros, empregando a tecnologia Ruby on Rails. Seus propósitos incluem a aquisição de competências elementares na utilização do framework Ruby On Rails. Esse empreendimento constitui um dos projetos abrangidos pela mentoria <a href="https://hotmart.com/pt-br/marketplace/produtos/desenvolvendome/S43742208Q">DesenvolvendoMe</a>.
     <br />
     <br />
     <br />
     ·
-    <a href="https://github.com/joaogdfaero/editora_livros_rails/issues">Report Bug</a>
+    <a href="https://github.com/Hegnon/editora_de_livros_rails/issues">Report Bug</a>
     ·
-    <a href="https://github.com/joaogdfaero/editora_livros_rails/issues">Request Feature</a>
+    <a href="https://github.com/Hegnon/editora_de_livros_rails/issues">Request Feature</a>
   </p>
 </div>
 
