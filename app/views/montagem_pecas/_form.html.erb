@@ -16,10 +16,19 @@
   <%= form.collection_select :montagem_id, Montagem.all, :id, :nome, {}, { class: 'autor-select' } %>
   </div>
 
-  <div>
-  <%= form.label :peca_id, style: "display: block" %>
-  <%= form.collection_select :peca_id, Peca.all, :id, :nome, {}, { class: 'peca-select' } %>
+  <div class="peca-fields">
+    <%= form.label :peca_id, "Peças", style: "display: block" %>
+    <%= form.collection_select :peca_id, Peca.all, :id, :nome, {}, { class: 'peca-select' } %>
   </div>
+
+  <div class="add-peca">
+    <%= link_to "Adicionar outra peça", "#", class: "add-peca-button" %>
+  </div>
+
+<!--  <div>-->
+  <%#= form.label :peca_id, style: "display: block" %>
+  <%#= form.collection_select :peca_id, Peca.all, :id, :nome, {}, { class: 'peca-select' } %>
+<!--  </div>-->
 
   <div>
     <%= form.submit %>
