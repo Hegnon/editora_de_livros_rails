@@ -21,8 +21,40 @@
   <%= form.collection_select :livro_id, Livro.all, :id, :titulo, {}, { class: 'autor-select' } %>
   </div>
 
+  <div class="peca-fields">
+    <%= form.label :peca_id, "Peças", style: "display: block" %>
+    <%= form.collection_select :peca_id, Peca.all, :id, :nome, {}, { class: 'peca-select' } %>
+  </div>
+
+  <div class="add-peca">
+    <%= link_to "Adicionar outra peça", "#", class: "add-peca-button" %>
+  </div>
+
   
   <div>
     <%= form.submit %>
   </div>
 <% end %>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const addPecaButton = document.querySelector(".add-peca-button");
+        const pecaFieldsContainer = document.querySelector(".peca-fields");
+
+        let pecaCounter = 1;
+
+        addPecaButton.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            const newPecaField = document.createElement("div");
+            newPecaField.innerHTML = `
+        <label for="montagem_peca_ids_${pecaCounter}">Peça ${pecaCounter + 1}</label>
+        <select class="peca-select" name="montagem[peca_ids][]" ...> <%= options_from_collection_for_select(Peca.all, :id, :nome) %> </select>
+      `;
+
+            pecaFieldsContainer.appendChild(newPecaField);
+            pecaCounter++;
+        });
+    });
+</script>
