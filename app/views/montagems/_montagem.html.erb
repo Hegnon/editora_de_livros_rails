@@ -10,8 +10,10 @@
   </p>
 
   <p>
-    <strong>Peça:</strong>
-    <%= montagem_peca.peca_id.nome %>
+    <strong>Peças:</strong>
+    <% montagem.pecas.each do |peca| %>
+      <%= peca.nome %>
+    <% end %>
   </p>
 
   
