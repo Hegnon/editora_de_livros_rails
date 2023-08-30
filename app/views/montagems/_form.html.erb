@@ -17,12 +17,60 @@
   </div>
 
   <div>
-  <%= form.label :livro_id, style: "display: block" %>
-  <%= form.collection_select :livro_id, Livro.all, :id, :titulo, {}, { class: 'autor-select' } %>
+    <%= form.label :livro_id, style: "display: block" %>
+    <%= form.collection_select :livro_id, Livro.all, :id, :titulo, {}, { class: 'autor-select' } %>
   </div>
 
-  
+  <div class="peca-fields">
+
+
+    <% montagem.peca_ids.each do |peca_id| %>
+      <div class="peca-field">
+        <%= form.collection_select :peca_ids, Peca.all, :id, :nome, { selected: peca_id }, { class: 'peca-select' } %>
+        <%= link_to "Remover", "#", class: "remove-peca-button" %>
+      </div>
+    <% end %>
+
+    <div class="add-peca">
+      <%= link_to "Adicionar peça", "#", class: "add-peca-button" %>
+    </div>
+  </div>
+
   <div>
     <%= form.submit %>
   </div>
 <% end %>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const addPecaButton = document.querySelector(".add-peca-button");
+        const pecaFieldsContainer = document.querySelector(".peca-fields");
+
+        let pecaCounter = 1;
+
+        addPecaButton.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            const newPecaField = document.createElement("div");
+            newPecaField.innerHTML = `
+        <div class="peca-field">
+          <label for="montagem_peca_ids_${pecaCounter}"/label>
+          <select class="peca-select" name="montagem[peca_ids][]" ...>
+            <%= options_from_collection_for_select(Peca.all, :id, :nome) %>
+          </select>
+          <a href="#" class="remove-peca-button">Remover</a>
+        </div>
+      `;
+
+            pecaFieldsContainer.appendChild(newPecaField);
+            pecaCounter++;
+        });
+
+        pecaFieldsContainer.addEventListener("click", function(event) {
+            if (event.target.classList.contains("remove-peca-button")) {
+                event.preventDefault();
+                event.target.closest(".peca-field").remove();
+            }
+        });
+    });
+</script>
