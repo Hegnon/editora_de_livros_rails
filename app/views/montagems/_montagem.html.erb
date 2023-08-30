@@ -10,11 +10,18 @@
   </p>
 
   <p>
-    <strong>Peças:</strong>
+    <strong>Peças:</strong><br>
     <% montagem.pecas.each do |peca| %>
-      <%= peca.nome %>
+      <%= "Número: #{peca.numero} - #{peca.nome} - Valor: R$#{peca.valor}" %><br>
     <% end %>
   </p>
 
-  
+
+
+  <p>
+    <strong>Valor total:</strong>
+    <%= number_to_currency(montagem.total_valor_pecas, unit: "R$", separator: ",") %>
+  </p>
+
+
 </div>

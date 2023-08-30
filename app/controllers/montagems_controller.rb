@@ -65,6 +65,6 @@ class MontagemsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def montagem_params
-      params.require(:montagem).permit(:nome, :livro_id, peca_id: [])
+      params.require(:montagem).permit(:nome, :livro_id, peca_ids: [])
     end
 end
