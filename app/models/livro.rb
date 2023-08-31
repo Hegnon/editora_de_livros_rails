@@ -1,6 +1,6 @@
 class Livro < ApplicationRecord
   belongs_to :autor
-  has_many :montagem
+  has_many :montagems
 
   def nome
     autor.nome if autor
@@ -10,11 +10,11 @@ class Livro < ApplicationRecord
   validates :titulo, presence: true
   validates :titulo, length: { minimum:1, maximum:100 }
   validates :isbn, presence: true
-  validates :isbn, uniqueness: true
-  validate :isbn_is_valid?
+  # validates :isbn, uniqueness: true
+  # validate :isbn_is_valid?
 
   scope :search, ->(query) { where("titulo like ?", "%#{query}%") }
-  scope :by_author_name, ->(query) { joins(:author).where("LOWER(authors.name) LIKE ?", "%#{query.downcase}%") }
+  scope :by_autor_nome, ->(query) { joins(:autor).where("LOWER(autors.nome) LIKE ?", "%#{query.downcase}%") }
 
 
   private

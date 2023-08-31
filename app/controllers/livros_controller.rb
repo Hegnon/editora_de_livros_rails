@@ -3,7 +3,9 @@ class LivrosController < ApplicationController
 
   # GET /livros or /livros.json
   def index
-    @livros = Livro.all
+    @livros = Livro.search(params[:search]) if (params[:search]) and (params[:search_type] == 'livro_titulo')
+    @livros = Livro.by_autor_nome(params[:search]) if (params[:search]) and (params[:search_type] == 'autor_nome')
+    @livros = Livro.all unless params[:search]
   end
 
   # GET /livros/1 or /livros/1.json
