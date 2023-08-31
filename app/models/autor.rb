@@ -4,7 +4,7 @@ class Autor < ApplicationRecord
   validates :nome, presence: true
   validates :nome, length: { minimum: 3, maximum: 60 }
   validates :nome, uniqueness: true
-  validates :cpf, uniqueness: true
+  # validates :cpf, uniqueness: true
   validate :cpf_is_valid?
 
   
