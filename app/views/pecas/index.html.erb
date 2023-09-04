@@ -1,3 +1,12 @@
+<%= form_tag(pecas_path, method: :get) do %>
+  <p> Filtrar por:
+    <%= radio_button_tag 'search_type', 'fornecedor_nome', true %>
+    Fornecedor
+    <%= text_field_tag 'search', nil, placeholder: 'Digite o fornecedor...' %>
+    <%= submit_tag "Filtrar" %>
+  </p>
+<% end %>
+
 <h1>Pecas</h1>
 
 <div id="pecas">
