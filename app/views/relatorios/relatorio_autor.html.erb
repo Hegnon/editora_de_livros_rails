@@ -1,0 +1,29 @@
+<!-- app/views/relatorios/relatorio_autor.html.erb -->
+
+<h1>Relatório de Autores</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Autor</th>
+    <th>Livros Publicados</th>
+    <th>Títulos dos Livros</th> <!-- Adicionado o título dos livros -->
+  </tr>
+  </thead>
+  <tbody>
+  <% @autors.each do |autor| %>
+    <tr>
+      <td><%= autor.nome %></td>
+      <td><%= autor.livros.count %></td>
+      <td>
+        <ul>
+          <% autor.livros.each do |livro| %>
+            <li><%= livro.titulo %></li>
+          <% end %>
+        </ul>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
