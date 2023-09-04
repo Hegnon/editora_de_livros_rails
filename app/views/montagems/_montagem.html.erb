@@ -1,0 +1,27 @@
+<div id="<%= dom_id montagem %>">
+  <p>
+    <strong>Nome:</strong>
+    <%= montagem.nome %>
+  </p>
+
+  <p>
+    <strong>Livro:</strong>
+    <%= montagem.livro.titulo%>
+  </p>
+
+  <p>
+    <strong>Peças:</strong><br>
+    <% montagem.pecas.each do |peca| %>
+      <%= "Número: #{peca.numero} - #{peca.nome} - Valor: R$#{peca.valor}" %><br>
+    <% end %>
+  </p>
+
+
+
+  <p>
+    <strong>Valor total:</strong>
+    <%= number_to_currency(montagem.total_valor_pecas, unit: "R$", separator: ",") %>
+  </p>
+
+
+</div>
