@@ -1,0 +1,7 @@
+/* Este estilo oculta o elemento com a classe "menu-lateral" na impressão */
+@media print {
+    .sidebar {
+        display: none;
+    }
+}
+
