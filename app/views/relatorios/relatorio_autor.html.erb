@@ -2,23 +2,29 @@
 
 <h1>Relatório de Autores</h1>
 
-<table>
+<table border="2">
   <thead>
-  <tr>
-    <th>Autor</th>
-    <th>Livros Publicados</th>
-    <th>Títulos dos Livros</th> <!-- Adicionado o título dos livros -->
+  <tr style="border: 1px solid black; padding: 8px; text-align: center;">
+    <th style="border: 1px solid black; padding: 8px;">ID</th>
+    <th style="border: 1px solid black; padding: 8px;">Autor</th>
+    <th style="border: 1px solid black; padding: 8px;">CPF</th>
+    <th style="border: 1px solid black; padding: 8px;">Publicados</th>
+    <th style="border: 1px solid black; padding: 8px;">Livros</th>
   </tr>
   </thead>
   <tbody>
   <% @autors.each do |autor| %>
     <tr>
-      <td><%= autor.nome %></td>
-      <td><%= autor.livros.count %></td>
-      <td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center;"><%= autor.id %></td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center;"><%= autor.nome %></td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center;"><%= autor.cpf %></td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center;"><%= autor.livros.count %></td>
+      <td style="border: 1px solid black; padding: 8px;">
         <ul>
           <% autor.livros.each do |livro| %>
-            <li><%= livro.titulo %></li>
+            <li><%= "Titulo: " + livro.titulo %></li>
+            <li><%= "Publicado: " + livro.publicado %></li>
+            <li><%= "ISBN: " + livro.isbn %></li><br>
           <% end %>
         </ul>
       </td>
