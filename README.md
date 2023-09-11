@@ -18,7 +18,7 @@
 ## Algumas Funcionalidades :iphone:
 Validação de CPF e geração de relatório com livros publicados pelo autor.            |  Relatório completo de autor. 
 :-------------------------:|:-------------------------:
-![1](https://vimeo.com/manage/videos/863364843/4d07426bba)  |  ![2](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/90f20ef2-992a-4d6b-896e-7c36c13700dc.gif?ClientID=vimeo-core-prod&Date=1694472198&Signature=5ce73fb50bcc3c5a993fea4ec9f5c366202fe4a6)
+![1](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/43f33a63-39bf-4ab5-9200-5ebe4e6578f2.gif?ClientID=vimeo-core-prod&Date=1694474015&Signature=e7af0d6790c5f1003136305b3af6af192f4672b1)  |  ![2](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/90f20ef2-992a-4d6b-896e-7c36c13700dc.gif?ClientID=vimeo-core-prod&Date=1694472198&Signature=5ce73fb50bcc3c5a993fea4ec9f5c366202fe4a6)
 
 ## Etapas do Projeto :ballot_box_with_check:
 ### 1 - CRUDs
