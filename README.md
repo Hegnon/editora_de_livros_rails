@@ -35,7 +35,7 @@ Cadastro de montagem com várias peças.            |  Relatório completo de au
 - Cadastrar Fornecedores com uma Conta
 - Cadastrar Peças vinculando com Fornecedor
 
-### 3. Roles (Regras)
+### 3. Regras
 - ### Alterar
   - Adicionar campo CNPJ em Fornecedor
   - Adicionar campo Dígito Verificador em Conta
