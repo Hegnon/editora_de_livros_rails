@@ -69,10 +69,6 @@ Cadastro de montagem com várias peças.            |  Relatório completo de au
 </font>
 
 
-## API Documentation (Postman) <a href="https://stackshare.io/postman" target="_blank"><img src="https://github.com/kilianpaquier/devicon/blob/dbea53e8f43aa502e0d35d595729ecd86db87f62/icons/postman/postman-plain.svg" alt="ruby" width="40" height="40" /></a> 
-
-[Link](https://documenter.getpostman.com/view/24543977/2s8YsnXwCV) 
-
 ## Tecnologias:
 * Ruby 3.1.3
 * Rails 7.0.4.3
@@ -94,12 +90,9 @@ Cadastro de montagem com várias peças.            |  Relatório completo de au
 5. **O servidor inciará na porta: 3000 - acesse:**    
 ` http://localhost:3000 `
 
-## Kanban <a href="" target="_blank"><img src="https://github.com/joaogdfaero/editora_livros_rails/blob/main/images/kanban.png" alt="kanban" width="50" height="50" /></a> 
+## Kanban 
 
-[Project Kanban](https://github.com/users/joaogdfaero/projects/6)
+[Project Kanban](https://github.com/users/Hegnon/projects/11)
 
-##
-<br>Mentor / Leader: <strong>Marco Castro</strong>
-<br>Student / Author: <strong>João Gabriel Dal Forno (joao.dal@acad.ufsm.br)</strong>
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
