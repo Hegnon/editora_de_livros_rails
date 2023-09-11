@@ -16,9 +16,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## Algumas Funcionalidades :iphone:
-Validação de CPF e geração de relatório com livros publicados pelo autor.            |  Filtragem dos livros por título ou autor. 
+Validação de CPF e geração de relatório com livros publicados pelo autor.            |  Relatório completo de autor. 
 :-------------------------:|:-------------------------:
-![1](https://user-images.githubusercontent.com/103076610/222918236-05a2fab0-833b-40cb-bfef-cf8ff15a0ebd.gif)  |  ![2](https://user-images.githubusercontent.com/103076610/222918487-3a0310d8-d300-4ef5-a1c5-dc62c4f9dec4.gif)
+![1](https://vimeo.com/manage/videos/863364843/4d07426bba)  |  ![2](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/90f20ef2-992a-4d6b-896e-7c36c13700dc.gif?ClientID=vimeo-core-prod&Date=1694472198&Signature=5ce73fb50bcc3c5a993fea4ec9f5c366202fe4a6)
 
 ## Etapas do Projeto :ballot_box_with_check:
 ### 1 - CRUDs
