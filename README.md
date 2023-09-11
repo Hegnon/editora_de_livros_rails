@@ -41,9 +41,12 @@ Cadastro de montagem com várias peças.            |  Relatório completo de au
   - Adicionar campo Dígito Verificador em Conta
   - Adicionar campo ISBN em Livro
   - Adicionar campo CPF em Autor
-  - 
+  - Campo valor em Peça
+  - Campo título em Livro
+  - Campo nome em Peça
 - ### Calcular
-  - Dígito Verificador em Conta (pesquisar como calcular esse dígito verificador)
+  - Dígito Verificador em Conta
+    (Falta adicionar a inserção automatica do digito verificador após a conta ser criada)
 
 - ### Validar
   - CNPJ em Fornecedor
@@ -52,9 +55,6 @@ Cadastro de montagem com várias peças.            |  Relatório completo de au
 
 
 ### 4. Filtros
-- ### Adicionar
-  - Campo título em Livro
-  - Campo nome em Peça
 
 - ### Filtrar
   - Fornecedor por nome
@@ -63,8 +63,7 @@ Cadastro de montagem com várias peças.            |  Relatório completo de au
   - Livros por nome em Autor
 
 ### 5. Relatórios
-- ### Adicionar
-  - Campo valor em Peça
+  
 - ### Relatório
   - Autor (com todas as informações com seu Livros (com todas as informações) e o total de Livros publicado
 </font>
@@ -75,7 +74,7 @@ Cadastro de montagem com várias peças.            |  Relatório completo de au
 [Link](https://documenter.getpostman.com/view/24543977/2s8YsnXwCV) 
 
 ## Tecnologias:
-* Ruby 3.0.2
+* Ruby 3.1.3
 * Rails 7.0.4.3
 
 ## Instalação
