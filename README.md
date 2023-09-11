@@ -76,13 +76,14 @@ Cadastro de montagem com várias peças.            |  Relatório completo de au
 ## Tecnologias:
 * Ruby 3.1.3
 * Rails 7.0.4.3
+* Node 19.8.1
 
 ## Instalação
 1. **Clone este repositório**  
-` git clone https://github.com/joaogdfaero/editora_livros_rails.git`
+` git@github.com:Hegnon/editora_de_livros_rails.git`
 
 2. **Acesse a pasta do projeto**  
-` cd editora_livros_rails `
+   `Pasta onde fez o clone do repositório`
 
 3. **Instale as gems necessárias**  
 ` bundle `
