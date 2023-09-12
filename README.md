@@ -66,6 +66,8 @@ Cadastro de montagem com várias peças.            |  Relatório completo de au
   
 - ### Relatório
   - Autor (com todas as informações com seu Livros (com todas as informações) e o total de Livros publicado
+  - Gerar Relatório de Fornecedor (com todas as informações), com todos os Autores (com todas as informações) e Livros (com todas as informações) - (falta terminar)
+  - Gerar Relatório de Livro com Montagem (com todas as informações), suas Peças (com todas as informações), o Total de Peças e o Custo Total da Montagem - (Pendente)
 </font>
 
 
