@@ -1,8 +1,8 @@
 
-<h3 align="center">Editora Rails</h3>
+<h3 align="center">Editora De Livros</h3>
 
   <p align="center">
-    Este empreendimento visa a criação de um website para uma casa editorial de livros, empregando a tecnologia Ruby on Rails. Seus propósitos incluem a aquisição de competências elementares na utilização do framework Ruby On Rails. Esse empreendimento constitui um dos projetos abrangidos pela mentoria <a href="https://hotmart.com/pt-br/marketplace/produtos/desenvolvendome/S43742208Q">DesenvolvendoMe</a>.
+    Este empreendimento visa a criação de um website para uma editorial de livros, empregando a tecnologia Ruby on Rails. Seus propósitos incluem a aquisição de competências elementares na utilização do framework Ruby On Rails. Esse empreendimento constitui um dos projetos abrangidos pela mentoria <a href="https://hotmart.com/pt-br/marketplace/produtos/desenvolvendome/S43742208Q">DesenvolvendoMe</a>.
     <br />
     <br />
     <br />
@@ -95,4 +95,4 @@ Cadastro de montagem com várias peças.            |  Relatório completo de au
 [Project Kanban](https://github.com/users/Hegnon/projects/11)
 
 
-<p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
+
