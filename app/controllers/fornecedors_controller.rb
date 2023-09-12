@@ -3,7 +3,8 @@ class FornecedorsController < ApplicationController
 
   # GET /fornecedors or /fornecedors.json
   def index
-    @fornecedors = Fornecedor.all
+    @fornecedors = Fornecedor.by_fornecedor_nome(params[:search]) if (params[:search]) and (params[:search_type] == 'nome')
+    @fornecedors = Fornecedor.all unless params[:search]
   end
 
   # GET /fornecedors/1 or /fornecedors/1.json

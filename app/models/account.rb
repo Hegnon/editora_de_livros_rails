@@ -8,9 +8,9 @@ class Account < ApplicationRecord
 
   validates :numero_conta, presence: true
   validates :numero_conta, uniqueness: true
-  validate :account_digit_is_valid?
+  # validate :account_digit_is_valid?
 
-  scope :search, ->(query) { where("account_number like ?", "%#{query}%") }
+  scope :search, ->(query) { where("numero_conta like ?", "%#{query}%") }
 
   private
   def account_digit_is_valid?

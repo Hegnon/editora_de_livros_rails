@@ -6,11 +6,11 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'print', media: 'print' %>
     <%= javascript_importmap_tags %>
   </head>
   <body>
     <div class="sidebar">
-      <!-- Conteúdo do menu lateral aqui -->
       <div><%= link_to "Home", root_path %></div>
       <div><%= link_to "Autores", autors_path %></div>
       <div><%= link_to "Livros", livros_path %></div>
@@ -18,9 +18,7 @@
       <div><%= link_to "Contas", accounts_path %></div>
       <div><%= link_to "Peças", pecas_path %></div>
       <div><%= link_to "Montagens", montagems_path %></div>
-
-
-      <!-- Adicione mais links do menu conforme necessário -->      
+      <div><%= link_to "Relatórios", relatorios_relatorio_autor_path %></div>
     </div>
 
     <div class="main-content">

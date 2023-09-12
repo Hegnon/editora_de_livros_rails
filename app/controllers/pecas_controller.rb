@@ -3,7 +3,8 @@ class PecasController < ApplicationController
 
   # GET /pecas or /pecas.json
   def index
-    @pecas = Peca.all
+    @pecas = Peca.by_fornecedor_nome(params[:search]) if (params[:search]) and (params[:search_type] == 'fornecedor_nome')
+    @pecas = Peca.all unless params[:search]
   end
 
   # GET /pecas/1 or /pecas/1.json
