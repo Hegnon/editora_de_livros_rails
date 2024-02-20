@@ -18,3 +18,6 @@ class Account < ApplicationRecord
     errors.add(:digit, "Dígito verificador inválido! Por favor, verifique os dados.") unless d.check_digit?
   end
 end
+
+xxx
+
